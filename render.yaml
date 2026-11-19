@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: smart-emergency-triage-backend
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
